@@ -223,6 +223,13 @@ if(WITH_THREAD_SAFE_RES_QUERY)
     set(HAVE_THREAD_SAFE_RES_QUERY 1 CACHE INTERNAL "Thread safe res_query supported.")
 endif(WITH_THREAD_SAFE_RES_QUERY)
 
+#option for LTTng
+option(HAVE_LTTNG "LTTng tracing is enabled" ON)
+if(${HAVE_LTTNG})
+find_package(lttng-ust REQUIRED)
+set(WITH_LTTNG ${LTTNG_FOUND})
+endif(${HAVE_LTTNG})
+
 # Now create a useable config.h
 configure_file(
   ${PROJECT_SOURCE_DIR}/src/include/config-h.in.cmake
