@@ -351,7 +351,7 @@ void PGBackend::be_scan_list(
 	       << ", skipping" << dendl;
     } else if (r == -EIO) {
       dout(25) << __func__ << "  " << poid << " got " << r
-	       << ", read_error" << dendl;
+	       << ", stat_error" << dendl;
       ScrubMap::object &o = map.objects[poid];
       o.stat_error = true;
     } else {
