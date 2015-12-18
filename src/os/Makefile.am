@@ -68,6 +68,7 @@ noinst_HEADERS += \
 	os/bluestore/BlueFS.h \
 	os/bluestore/BlueRocksEnv.h \
 	os/bluestore/BlueStore.h \
+	os/bluestore/FreelistManager.h \
 	os/bluestore/StupidAllocator.h \
 	os/kstore/kstore_types.h \
 	os/kstore/KStore.h \
